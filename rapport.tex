@@ -1,0 +1,60 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[frenchb]{babel}
+
+\usepackage{microtype}
+\usepackage{mathtools}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{float}
+\usepackage{CJK}
+
+\newcommand{\ce}{Mme Christine Evain}
+\newcommand{\ms}{M Stéphane Loret}
+\newcommand{\jm}{M Jean-Yves Martin}
+\newcommand{\blender}{\emph{Blender}}
+\newcommand{\opencv}{\textsc{o}pen\textsc{cv}}
+\newcommand{\opengl}{\textsc{o}pen\textsc{gl}}
+\newcommand{\yaml}{\textsc{yaml}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt plus 5pt minus 3pt}
+
+\hypersetup{
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+\title{Rapport de Stage \vspace{6mm}\\ \hrule Développment d'eZoomBook.}
+
+\author{ZHAO Shuli}
+
+\date{ 2015}
+
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gkai}
+\maketitle
+\input{abstract.tex}
+\tableofcontents
+\input{introduction.tex}
+\input{presentation.tex}
+%\input{presentation_ezoombook.tex}
+%\input{presentation_mission.tex}
+\input{demarche.tex}
+\input{resultats.tex}
+\input{regrets.tex}
+\input{conclusion.tex}
+\input{biblio.tex}
+\input{annexes.tex}
+%\end{CJK*}
+\end{document}
