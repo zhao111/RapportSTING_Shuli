@@ -1,0 +1,65 @@
+\section{Dégagement des contraintes de développement}
+
+Selon des fonctions définies et des codes existantes, j'ai défini des contraintes et proposé des solutions :
+\begin{enumerate}
+    \item La gestion d'utilisateurs
+    
+    \textbf{Contraintes} 
+    \begin{itemize}
+        \item Manque d'un système d'accès connecté celui de l’écoles
+        \item Sans reconnaissance d’identités
+    \end{itemize}
+    \textbf{Propositions} 
+    \begin{itemize}
+        \item Communiquer avec les responsables informatiques d'écoles pour intérroger des méthodes de connection
+        \item Réaliser la reconnaissance selon les mails address \footnote{ Par exemple, @eleves.ec-nantes.fr indique un élève et @ec-nantes.fr indique un enseignant } 
+        \item Avant l'intégration de comptes, un système d'autorisation provisoire ressemblant celui d'ezb sera réalisé
+        \item Des messageries à ajouter supplémentairement à la fin
+    \end{itemize}
+
+    \item La gestion de livres
+
+    \textbf{Contraintes} 
+    \begin{itemize}
+        \item Manque de possibilités d'utilisation de multi-format et téléchargement
+    \end{itemize} 
+    \textbf{Propositions} 
+    \begin{itemize}
+        \item Sauvegarder des fichiers en format XML, TEI précisement, pour sa utilisation générale dans le domaine de livre numérique
+        \item Chercher des outils de transformations, sinon il faut fabriquer un 
+        \item Permettre le créateur d'un livre de définir son status, publique ou privé, pour éviter des problèmes de copyright
+    \end{itemize}
+
+    \item La gestion de projets
+
+    \textbf{Contraintes}
+    \begin{itemize}
+        \item Impossibilité de définir la finalité par utilisateurs et de les distribuer aux sous-groupes
+        \item Difficulté d'organiser des citations, résumés, écritures créatives, etc dans un layer
+        \item Manque des contrôles de layers et des possibilité d'inviter des autres éditeurs hors du groupe
+    \end{itemize}
+    \textbf{Propositions} 
+    \begin{itemize}
+        \item Introduire les conception \textbf{Marqueur}, qui indique une position dans le livre, et \textbf{Séquence}, qui permet de choisir un marqueur au début, un à la fin et des élèves d'édition
+        \item Limiter le nombre de niveaux de layers, définir trois type de layers 
+            \begin{itemize}
+                \item \textbf{Layer Original } qui est une copie d'un livre et on peut définir des marqueurs et des séquences dessus
+                \item \textbf{Layer Travail } qui permet d'ajouter soit des citations soit des éctiture \footnote{ traduction, résumés, écritures créatives, ect... } 
+                \item \textbf{Layer Commentaire } qui correspond automatiquement aux travails dans le layer parent
+            \end{itemize}
+        \item Permettre de choisir la finalité comprenant celle définie par utilisateur, mais aussi d'entier livre ou de chapitres ou de paragraphes fournies automatiquement par la plate-forme, pour chaque layer travail pour réaliser différent type d'écriture \footnote{ Par exemple, utiliser la finalité de paragraphes pour la traduction, utiliser la finalité de chapitres pour les résumés de chapitres, etc...} 
+        \item Possible de choisir Privé comme le status d'un layer qui sera invisible pour le publique ni copi-able
+        \item Permettre d'inviter des autres personnes pour contribuer dans le projet ou commenter des travails faits par des élèves
+    \end{itemize}
+
+    \item La gestion de groupes
+
+    \textbf{Contraintes}
+    \begin{itemize}
+        \item Trop de niveaux à choisir quand ajouter un membre qui comprend même le niveau Créateur
+    \end{itemize}
+    \textbf{Propositions} 
+    \begin{itemize}
+        \item Ajouter des membres sans définir leur rôle, ne choisir qu'un seul membre comme le manager du groupe 
+    \end{itemize}   
+\end{enumerate}
