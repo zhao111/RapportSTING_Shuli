@@ -67,44 +67,40 @@ La nouvelle conception de l'application peut être présentée dans trois partie
 \end{figure}
 
 \subsubsection{La structure de projets}
+
 Pour garder la flexibilité de multi-échelles et la possibilité de création de layers contenant des citations et autres écritures, j'ai proposé un compromis :
 
 \begin{itemize}
     \item Possible de choisir Privé comme le status d'un layer qui sera invisible pour le publique ni copi-able
     \item Livres sont traités comme layers originals où et on peut définir des marqueurs et des séquences dessus
-    \item Il y a deux types de layer travail :
-        \begin{itemize}
-            \item layer travail \textbf{non-structuré} qui n'est fondé que sur un layer original
-            \item layer travail \textbf{structuré} qui est fondé sur un layer original ou un layer travail non-structuré ou structuré
-        \end{itemize}
-    \item Layers commentaires n'ont pas de sous-layer, ils sont invisible pour le publique ni copi-able et leur status représente la visibilité pour des autres membres de groupe exlclus des éditeurs atorisés.
+    \item On peut créer autant de layers travails de manière multi-échelles 
 \end{itemize}
 
-Cette structure permettent d'une création de layer multi-échelles,
-
 \subsubsection{La distribution de projets}
+
 Un autre problème des deux conceptions existantes est de ne pas pouvoir couper un livre dans plusieurs morceaux et les distributer aux sous-groupes d'élèves selon l'esprits d'enseignants. En même temps, il faut fournir des choix de finalités raisonnables automatiquement pour éviter trop de travail. Selon les contraintes, j'ai proposé :
 
 \begin{itemize}
     \item Introduire les conception \textbf{Marqueur}, qui indique une position dans le livre, et \textbf{Séquence}, qui permet de choisir un marqueur au début, un à la fin et des élèves d'édition
-    \item Permettre de choisir la finalité comprenant celle définie par utilisateur, mais aussi d'entier livre ou de chapitres ou de paragraphes fournies automatiquement par la plate-forme, pour chaque layer travail pour réaliser différent type d'écriture \footnote{ Par exemple, utiliser la finalité de paragraphes pour la traduction, utiliser la finalité de chapitres pour les résumés de chapitres, etc...} 
-    \item Si les élèves travaillent dans un layer distribué de la manière définie par enseignants, ils ne peuvent éditer que dans la séquences autorisée.
+    \item Permettre d'un distribution d'autres finalités fournies automatiquement par la plate-forme comprenant entier livre ou chapitres ou paragraphes, etc...
 \end{itemize}
 
 \subsubsection{La contribution de projets}
 
 \begin{itemize}
-    \item \textbf{Layers travail non-structuré} sont vides quand créés, ils supportent deux types d'ajouts :des citations et des écritures libres \footnote{ traduction, résumés, écritures créatives, ect... }
-    \item \textbf{Layers travail structuré} qui correspond automatiquement aux travails dans le layer parent, ils ne soutient que les écritures libres correspondants le même morceau de travail de son parent layer
-    \item \textbf{Layers commentaires} ont la même structure de son layer parent à commenter, et leurs visibilités sont définies par leurs status.
-    \item L'édition est réalisée de la manière synchronisée, tous les travails sont visibles pendant l'édition.
+    \item Quand créer un sous-layer d'un layer original, on peut sélecter une des toutes finalités possibles, des sous-layers d'un layer travail vont hériter sa finalité automatiquement
+    \item Fournir plusieurs choix de type d'édition quand créer un layer :
+            \begin{itemize}
+                \item \textbf{Individuel} :une édition du créateur, des membres de groupe n'ont pas le droit d'éditer
+                \item \textbf{Groupe} :une édition de groupe selon la distribution de la finalité du layer, un éditeur ne peut pas voir des éditions d'autres parties
+                \item \textbf{Collaborative} :une édition synchronisée qui permet de lire des éditions d'autres parties mais ils ne peuvent éditer que dans la partie autorisée
+            \end{itemize}
+    \item Des éditions d'un layer travail sont des ajouts de parties qui permet des citations de parent-layer, des insertions et des écritures multiformat
+    \item Dans des éditions d'un layer de niveau N, permettre de lire tous les layers de niveau original au niveau N-1
 \end{itemize}
-
-En bref, 
 
 \begin{itemize}
     \item \textbf{Layers originals} représentant des livres sont des bases de projets
-    \item \textbf{Layers travail} garantissent une structure multi-échelles, mais avec la contrainte de ne pas pouvoir faire des citations hors layers originals
-    \item \textbf{layers commentaires} sont les dernières feuilles des braches
+    \item \textbf{Layers travail} garantissent une structure multi-échelles illimité et des écritures très libres
     \item D'ailleurs, la nouvelle conception de projets permet d'inviter des autres personnes pour contribuer dans le projet ou commenter des travails faits par des élèves. 
 \end{itemize}
