@@ -1,8 +1,8 @@
 \section{Analyse de l'existant}
 
-La première version de plate-forme d’\ezb\ était lancée une fois par une équipe de développeurs, mais quittée avec des difficultés de la conception et des codes. Quand je suis arrivée, la nouvelle version de la conception et la structure des codes de plate-forme qui s'appelle \textbf{\mini\ } \footnote{Le nom \mini\ qui indique le légèreté de la nouvelle structure ne sert que faire une différence avec l'ancienne version pendant le développement} étaient réalisés par Ophir, un camarade qui travaillait dessus pendant quelques moins. 
+La première version de plate-forme d’\ezb\ a été lancée, puis arrêtée, par une équipe de développeurs, du faite des difficultés en termes de conception et de code. Quand je suis arrivée, la nouvelle version de la conception et de la structure des codes de la plate-forme qui s'est appellée \textbf{\mini\ } \footnote{Le nom \mini\ indiquait la légèreté de la nouvelle structure et contrastait avec l'ancienne version ; son développement avait été réalisé par Ophir LOJKINE, un camarade qui a travaillé sur ce projet pendant quelques mois. }
 
-Pour me faire connaître des principes ils ont proposés et des technologiques utilisées, pendant le premier moins, j’ai analysé les concepts, choix technologiques et codes de l'\ezb\ et du \mini\ .  
+Afin de découvrir les principes de ces plateformes, pendant le premier moins, j’ai analysé les concepts, choix technologiques et codes de l'\ezb\ et du \mini\ .  
 
 \subsection{Analyse de la conception}
 La conception proposée par la plate-forme d’\ezb\ est :
@@ -14,9 +14,9 @@ La conception proposée par la plate-forme d’\ezb\ est :
     \item un ensemble de layers \footnote{Dans le cadre d'\ezb\ , layer représente la conception de couche où on peux ajouter des citations et résumés} fondé sur un livre
     \item chaque layer devait contenir une liste de citations du texte original et de résumés
 \end{itemize}
-Avec cette conception, on ne peux pas créer une structure multi-échelles qui permet d'une création de sous-layer d'un layer, qui est intéressant pour faire des commentaires, etc.
+Avec cette conception, on ne peut pas créer une structure multi-échelles qui permet d'une création de sous-layer d'un layer, ce qui est intéressant pour faire des commentaires, etc.
 
-La conception était amélioré par Ophir qui a proposé une manière plus adaptable :\textbf{Couches à thème}. Dans cette version, 
+La conception était améliorée par Ophir qui a proposé une stratégie de création de layers plus adaptable : \textbf{les Couches à thème}. Dans cette version, 
 
 \begin{wrapfigure}{r}{0.4\textwidth}
     \centering
@@ -26,12 +26,12 @@ La conception était amélioré par Ophir qui a proposé une manière plus adapt
 \begin{itemize}
     \item le livre d'un projet est traité comme un layer
     \item des layers sont fondés sur quelconque layer du projet
-    \item chaque layer devait contenir une thème comprenant citation, résumé, traduction, ect
+    \item chaque layer devait contenir un thème comprenant citation, résumé, traduction, ect
 \end{itemize}
 
 \subsection{Analyse des fonctionnelles}
-Les changements fonctionnelles d'\mini\ avaient concentré sur les parties des gestions de livres et de projets. 
-Les parties des gestions d'utilisateurs et de groups sont bien définies dans \ezb\ , mais pas dans \mini\ .  
+Les changements fonctionnels de \mini\ étaient concentrés sur les parties des gestions de livres et de projets. 
+Les parties des gestions d'utilisateurs et de groupes sont bien définies dans \ezb\ , mais pas dans \mini\ .  
 
 \subsubsection{La gestion de livres}
 \begin{center}
@@ -41,7 +41,7 @@ Les parties des gestions d'utilisateurs et de groups sont bien définies dans \e
 \hline
 Format ePub                  &  Multi-format \\ 
 Gardé comme un fichier .epub &  Gardé dans \db\ en structure \\ 
-Non télécharger-able         &  Télécharger-able en multi-format \\
+Non téléchargeable         &  Téléchargeable en multi-format \\
 \hline
 \end{tabular}
 \end{center}
@@ -52,22 +52,22 @@ Non télécharger-able         &  Télécharger-able en multi-format \\
 \hline
 \ezb\ & \mini\ \\ 
 \hline
-4 niveaus de finalités à choisir par les utilisateurs \footnotemark & Finalité des paragraphes et des chapitres \\ 
-Création de layers du livre & Création de layers des toutes layers \\ 
-Citations et résumés & Citation et tous les types de écritures possibles \\
+4 niveaux de finalités à choisir par les utilisateurs \footnotemark & Finalité des paragraphes et des chapitres \\ 
+Création de layers du livre & Création de layers à partir d'autres layers \\ 
+Citations et résumés & Citation et tous types d'écritures possibles \\
 \hline
 \end{tabular}
 \end{center}
 \footnotetext{ Higly Detailed, Fairly Detailed, Fairly Abridged et Highly Abridged } 
 
 \subsubsection{La gestion d'utilisateurs}
-Dans \ezb\ , il faut s'inscrire dans le site et tous les utilisateurs sont dans le même niveau de droits qui permet de accéder toutes fonctions fournies par la plate-forme.
+Dans \ezb\ , il faut s'inscrire dans le site et tous les utilisateurs sont dans le même niveau de droits qui permet d'accéder à toutes les fonctions de la plate-forme.
 
 \subsubsection{La gestion de groups}
-Dans \ezb\ , il y a 3 rôles correspondant différents niveaux de droits de manipuler à choisir quand on ajoute un membre :
+Dans \ezb\ , il y a 3 rôles correspondant aux différents niveaux de droits : pour chaque membre ajouté, on définie un rôle :
 \begin{itemize}
     \item \textbf{Owner} qui a tous les droits.
-    \item \textbf{Coordinator} qui a le droit d'ajout de membres.
+    \item \textbf{Coordinator} qui a le droit d'ajouter des membres.
     \item \textbf{Collaborator} qui n'a pas le droit de gérer le groupe.
 \end{itemize}
 
@@ -92,10 +92,10 @@ Database & NoSQL & SQL \\
 
 Après des discussions avec Ophir, j'ai compris les intérêts de ces nouveaux choix.
 
-En comparaison de \textbf{Scala}, \textbf{JavaScript} est un langage plus utilisé par des développeurs web qui donne une possibilité plus grande de contribution des autres interéssés au \mini\ . 
+En comparaison de \textbf{Scala}, \textbf{JavaScript} est un langage plus davantage utilisé par des développeurs web qui donne à la communauté de développeurs une plus grande possibilité de contribution. 
 
-\textbf{Node.js}, une plateforme logicielle libre et événementielle en JavaScript orientée vers les applications réseau qui doivent pouvoir monter en charge,  rend possible de faire tourner un serveur web sans avoir besoin d'un logiciel externe comme Apache ou Lighttpd, et permettant de mieux contrôler la façon dont le serveur web fonctionne. Avec une communauté très active dans laquelle beaucoup de modules robustes existent et un système de paquet intégré (NPM), le développement avec Node.js ressemble à un jeu de construction, et permet d'accélérer le développement.
+\textbf{Node.js}, une plateforme logiciel libre en JavaScript orientée vers les applications réseau qui doivent pouvoir monter en charge,  rend possible de faire tourner un serveur web sans avoir besoin d'un logiciel externe comme Apache ou Lighttpd, et permettant de mieux contrôler la façon dont le serveur web fonctionne. Avec une communauté très active dans laquelle beaucoup de modules robustes existent et un système de paquet intégré (NPM), le développement avec Node.js ressemble à un jeu de construction, et permet d'accélérer le développement.
 
-\textbf{Express.js} est choisi comme le framwork pour qui'il s'agit en fait d'un micro-framework pour Node.js et il fournit des outils de base pour aller plus vite dans la création d'applications Node.js. Pour la côté de clients, on a choisi \textbf{React.js}, une bibliothèque orientée Composant. Dans le fonction d'édition, une manière puissante de traiter des changements des text est founie par React.js parce qu'il fonctionne sur le concept d'un \textbf{DOM virtuel}. DOM virtuel fait un diff rapide des changements, tous les lots dans une mise à jour et frappe le DOM réelle tout à la fois. 
+\textbf{Express.js} est choisi comme le framwork parce qu'il s'agit en fait d'un micro-framework pour Node.js et il fournit des outils de base pour aller plus vite dans la création d'applications Node.js. Pour le côté de clients, on a choisi \textbf{React.js}, une bibliothèque orientée Composant. Dans la fonction d'édition, une manière puissante de traiter les changements des text est founie par React.js parce qu'il fonctionne sur le concept d'un \textbf{DOM virtuel}. DOM virtuel fait un diff rapide des changements, tous les lots dans une mise à jour et frappe le DOM réelle tout à la fois. 
 
-Pour une flexibilité plus grande puisque on a besoin des ancres pour assurer des parties correspondent bien entre un layer et son parent layer, \textbf{SQL} est choisi pour garder des ancres et des contenus de layers. C'est aussi pour la raison qu'on déjà le pratiqué dans l'école, qui donne une convenance du développement. 
+Pour une flexibilité plus grande puisque on a besoin d'ancres pour s'assurer que les parties correspondent bien entre un layer et son parent layer, \textbf{SQL} est choisi pour garder des ancres et des contenus de layers. C'est aussi parce que nous avons la pratique de cet outil dans l'école, ce qui simplifie développement. 
