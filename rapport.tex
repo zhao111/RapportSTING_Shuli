@@ -1,4 +1,5 @@
 \documentclass{report}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -31,6 +32,7 @@
 \newcommand{\mo}{module}
 \newcommand{\tls}{LORET Stéphane}
 \newcommand{\ec}{EVAIN Christine}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10pt plus 5pt minus 3pt}
@@ -43,25 +45,41 @@
     filecolor=magenta,      % color of file links
     urlcolor=blue           % color of external links
 }
+
 \begin{document}
 \begin{spacing}{1.5}
 \begin{titlepage}
 
-\title{Rapport de Stage \vspace{6mm}\\ \hrule Développment d'eZoomBook.}
+\center
 
-\author{ZHAO Shuli}
+\textsc{\LARGE Rapport STING}\\[0.5cm]
 
-\date{Juillet 2015}
+\HRule \\[0.4cm]
+{ \huge \bfseries Développment d'eZoomBook}\\[0.4cm]
+\HRule \\[1.5cm]
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{logo}
-\end{figure}
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft} \large
+\emph{Stagiaire:}\\
+Shuli \textsc{ZHAO}\\
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Tuteur:}\\
+Stéphane \textsc{LORET} \\
+Christine \textsc{EVAIN} \\
+\end{flushleft}
+\end{minipage}\\[1cm]
 
+
+{\large Juillet 2015}\\[2.5cm]
+
+\includegraphics[width=0.8\textwidth]{logo.png}\\[1cm]
+\vfill
 \end{titlepage}
 
-
-\maketitle
 \input{abstract.tex}
 \tableofcontents
 \input{introduction.tex}
